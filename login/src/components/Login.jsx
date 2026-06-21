@@ -18,7 +18,8 @@ export default function Login() {
         //email: john@mail.com
         alert("login success"); // password : changeme
         console.log("you logged in :", res);
-      })
+        localStorage.setItem("token", JSON.stringify(res.data.access_token)); // storing the jwt token
+      }) // returned by the api in local storage
       .catch((err) => {
         alert("wrong credentials entered");
         console.log("loggin falied", err);
