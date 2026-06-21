@@ -167,7 +167,7 @@
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: -4.5px;
     border: 5px solid transparent;
@@ -181,4 +181,17 @@
     right: 0;
     border-right-color: var(--border);
   }
+}
+
+/* ── App layout — centers Profile + Login stacked on the page ── */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
 }

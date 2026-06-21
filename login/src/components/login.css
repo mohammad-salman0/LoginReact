@@ -1,0 +1,119 @@
+/* ── Base ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background: #0f0f13;
+  color: #e8e4dc;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+/* ── Login card wrapper ── */
+.login-page {
+  width: 100%;
+  max-width: 380px;
+  background: #1a1a22;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Title ── */
+.login-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #f0ecff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* ── Field group ── */
+.login-field {
+  margin-bottom: 1.4rem;
+}
+
+.login-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(232, 228, 220, 0.6);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.login-input {
+  width: 100%;
+  padding: 0.78rem 1rem;
+  background: #0f0f13;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #e8e4dc;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.login-input::placeholder {
+  color: rgba(232, 228, 220, 0.3);
+}
+
+.login-input:focus {
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.15);
+}
+
+/* ── Submit button ── */
+.login-btn {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  margin-top: 0.6rem;
+  background: #a78bfa;
+  color: #0f0f13;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(167, 139, 250, 0.3);
+  transition:
+    background 0.2s,
+    box-shadow 0.2s,
+    transform 0.15s;
+}
+
+.login-btn:hover {
+  background: #c4b5fd;
+  box-shadow: 0 4px 18px rgba(167, 139, 250, 0.45);
+}
+
+.login-btn:active {
+  transform: scale(0.97);
+}
+
+/* ── Responsive ── */
+@media (max-width: 420px) {
+  .login-page {
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+  }
+}

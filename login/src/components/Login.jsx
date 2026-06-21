@@ -1,9 +1,10 @@
 import { useState } from "react";
 import axios from "axios";
+import "./login.css";
 
 export default function Login() {
-  let [email, setEmail] = useState();
-  let [password, setPassword] = useState();
+  let [email, setEmail] = useState("");
+  let [password, setPassword] = useState("");
 
   let handleSubmit = () => {
     let payload = {
@@ -26,27 +27,36 @@ export default function Login() {
       });
     console.log(payload);
   };
+
   return (
-    <div>
-      <p>Login Page</p>
+    <div className="login-page">
+      <p className="login-title">Login Page</p>
 
-      <p>Email:</p>
-      <input
-        type="email"
-        value={email}
-        placeholder="Enter Email"
-        onChange={(e) => setEmail(e.target.value)}
-      ></input>
-      <p>Password:</p>
-      <input
-        type="password"
-        value={password}
-        placeholder="Enter password"
-        onChange={(e) => setPassword(e.target.value)}
-      ></input>
-      <br></br>
+      <div className="login-field">
+        <label className="login-label">Email:</label>
+        <input
+          type="email"
+          value={email}
+          placeholder="Enter Email"
+          onChange={(e) => setEmail(e.target.value)}
+          className="login-input"
+        ></input>
+      </div>
 
-      <button onClick={handleSubmit}> Login</button>
+      <div className="login-field">
+        <label className="login-label">Password:</label>
+        <input
+          type="password"
+          value={password}
+          placeholder="Enter password"
+          onChange={(e) => setPassword(e.target.value)}
+          className="login-input"
+        ></input>
+      </div>
+
+      <button onClick={handleSubmit} className="login-btn">
+        Login
+      </button>
     </div>
   );
 }

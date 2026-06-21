@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
+import "./profile.css";
+
 export default function Profile() {
   let [userData, setUserData] = useState();
 
@@ -27,17 +29,38 @@ export default function Profile() {
         alert("you are not logged in");
       });
   };
+
   return (
-    <div>
-      <p>Profile</p>
-      <button onClick={getProfileData}>get Profile Data</button>
-      <button onClick={handleLogOut}>Log Out</button>
+    <div className="profile-page">
+      <p className="profile-title">Profile</p>
+
+      <div className="profile-actions">
+        <button onClick={getProfileData} className="profile-btn fetch">
+          Get Profile Data
+        </button>
+        <button onClick={handleLogOut} className="profile-btn logout">
+          Log Out
+        </button>
+      </div>
 
       {userData && (
-        <div>
-          <p>Name: {userData?.name || "N/A"}</p>
-          <p>Email: {userData?.email || "N/A"}</p>
-          <p>Password: {userData?.password || "N/A"}</p>
+        <div className="profile-data">
+          <div className="profile-row">
+            <span className="profile-row-label">Name</span>
+            <span className="profile-row-value">{userData?.name || "N/A"}</span>
+          </div>
+          <div className="profile-row">
+            <span className="profile-row-label">Email</span>
+            <span className="profile-row-value">
+              {userData?.email || "N/A"}
+            </span>
+          </div>
+          <div className="profile-row">
+            <span className="profile-row-label">Password</span>
+            <span className="profile-row-value">
+              {userData?.password || "N/A"}
+            </span>
+          </div>
         </div>
       )}
     </div>
