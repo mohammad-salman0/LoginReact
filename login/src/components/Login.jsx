@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 export default function Login() {
   let [email, setEmail] = useState();
@@ -11,6 +12,17 @@ export default function Login() {
     };
     setEmail("");
     setPassword("");
+    axios
+      .post("https://api.escuelajs.co/api/v1/auth/login", payload) // to log in enter
+      .then((res) => {
+        //email: john@mail.com
+        alert("login success"); // password : changeme
+        console.log("you logged in :", res);
+      })
+      .catch((err) => {
+        alert("wrong credentials entered");
+        console.log("loggin falied", err);
+      });
     console.log(payload);
   };
   return (
@@ -31,6 +43,8 @@ export default function Login() {
         placeholder="Enter password"
         onChange={(e) => setPassword(e.target.value)}
       ></input>
+      <br></br>
+
       <button onClick={handleSubmit}> Login</button>
     </div>
   );
