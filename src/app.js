@@ -4,7 +4,7 @@ import morgan from "morgan";
 // add "type" :"module" in package.json
 const app = express();
 
-app.use(express.json());
-app.use(morgan("dev")); // logger records details about the request sent
+app.use(express.json()); //used for parsing
+app.use(morgan("dev")); // logger :-> records details about the request sent
 
 export default app;
