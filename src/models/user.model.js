@@ -16,3 +16,7 @@ const userSchema = mongoose.Schema({
     required: [true, "Password is required"],
   },
 });
+
+const user = mongoose.model("user", userSchema);
+
+export default user;
