@@ -1,4 +1,4 @@
-import userModel from "../models/user.model";
+import userModel from "../models/user.model.js";
 import crypto from "crypto";
 // the below function defines the fucntion of the api end point
 // /api/auth/register
