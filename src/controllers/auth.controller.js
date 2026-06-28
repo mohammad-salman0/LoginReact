@@ -48,3 +48,4 @@ export async function register(req, res) {
     token,
   });
 }
+// registration phase is complete.
