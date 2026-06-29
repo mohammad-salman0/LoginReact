@@ -7,3 +7,4 @@ app.listen(3000, () => {
 });
 
 connectDB();
+//moving to the next phase of project
