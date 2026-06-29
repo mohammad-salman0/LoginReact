@@ -10,4 +10,7 @@ app.use(morgan("dev")); // logger :-> records details about the request sent
 app.use("/api/auth", authRouter); // /api/auth is the prefix for every request assosiated with authRouter api end point
 
 // registration part complete.
+
+//moving to the next phase of project
+
 export default app;
