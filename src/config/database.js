@@ -12,5 +12,5 @@ async function connectDB() {
       console.log("error in connencting with the database");
     });
 }
-//moving to the next phase of project
+
 export default connectDB;
