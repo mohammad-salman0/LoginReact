@@ -11,6 +11,4 @@ app.use("/api/auth", authRouter); // /api/auth is the prefix for every request a
 
 // registration part complete.
 
-//moving to the next phase of project
-
 export default app;
